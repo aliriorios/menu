@@ -6,9 +6,9 @@
   
   <title>Restaurante - Seja bem-vindo!</title>
 
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/fontawesome.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <script language="JavaScript" src="js/jquery-1.12.4.min.js" defer></script>
   <script language="JavaScript" src="js/modernizr-3.5.0.min.js" defer></script>
@@ -18,22 +18,55 @@
 <body>
   
   <header class="header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg pl-0 pr-0">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.png" width="160px" alt="logo image" class="img-logo">
+        </a>
 
+        <!-- Botão para o menu no mobile -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+          <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+        </button>
+
+        <!-- As opções do menu de navegação -->
+        <div id="navbarNavDropdown" class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto mr-auto">
+            <li class="nav-item"><a href="#reserve" class="nav-link"><strong>Reservas</strong></a></li>
+            <li class="nav-item"><a href="#service" class="nav-link"><strong>Serviços</strong></a></li>
+            <li class="nav-item"><a href="#menu" class="nav-link"><strong>Cardápio</strong></a></li>
+            <li class="nav-item"><a href="#depositions" class="nav-link"><strong>Depoimentos</strong></a></li>
+          </ul>
+
+          <a href="" class="btn btn-white btn-icon">
+            Meu carrinho
+            <span class="icon">
+              <i class="fa fa-shopping-bag"></i>
+            </span>
+          </a>
+        </div>
+
+      </nav>
+    </div>
   </header>
 
   <section class="banner">
 
   </section>
 
-  <section class="service">
+  <section class="service" id="service">
     
   </section>
 
-  <section class="feedback">
+  <section class="menu" id="menu">
 
   </section>
 
-  <section class="reserve">
+  <section class="depositions" id="depositions">
+
+  </section>
+
+  <section class="reserve" id="reserve">
 
   </section>
 

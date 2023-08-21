@@ -488,3 +488,32 @@ a.navbar-brand {
   justify-content: center;
   align-items: end;
 }
+
+.reserve {
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+
+.card-secondary {
+  background-color: var(--color-secondary);
+  border-radius: 50px;
+
+  padding: 90px;
+}
+
+.card-reserva {
+  height: 320px;
+  width: 320px;
+
+  border-radius: 120px;
+
+  background-color: var(--color-white);
+
+  position: absolute;
+  right: 0;
+  top: -25px;
+}
+
+.reserve .img-banner img {
+  width: 100%;
+}

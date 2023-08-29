@@ -12,25 +12,44 @@ cardapio.eventos = {
 
 cardapio.metodos = {
     // Obtendo os itens do cardápio
-    obterItensCardapio: (categoria = 'burgers') => {
+    obterItensCardapio: (categoria = 'burgers', verMais = false) => {
         var filtro = MENU[categoria];
 
-        $("#itensMenu").html('');
-
-        $.each(filtro, (i, e) => {
+        if (!verMais) {
+            $("#itensMenu").html('');
+            $("#btnVerMais").removeClass('hidden');
+        } 
+        
+        $.each(filtro, (i, e) => { // O 'i' é o índice de itens
             let temp = cardapio.templates.item
             .replace(/\${img}/g, e.img)
             .replace(/\${name}/g, e.name)
             .replace(/\${price}/g, e.price.toFixed(2).replace('.', ','));
-            $("#itensMenu").append(temp);
+
+            // Botão ver mais foi acionado
+            if (verMais && i >= 8 && i <= 12) {
+                $("#itensMenu").append(temp);
+            }
+            
+            // Paginação inicial
+            if (!verMais && i < 8) {
+                $("#itensMenu").append(temp);
+            }
         })
 
         // Removendo o ativo do botão
         $(".container-menu a").removeClass("active");
 
         // Adicionando para a atual
-        $("#simsd-" + categoria).addClass("active");
-    }, 
+        $("#menu-" + categoria).addClass("active");
+    },
+
+    verMais: () => {
+        var ativo = $(".container-menu a.active").attr("id").split('menu-')[1]; // Pegando qual categoria está ativada [menu-][burgers]
+        cardapio.metodos.obterItensCardapio(ativo, true);
+
+        $("#btnVerMais").addClass("hidden");
+    }
 }
 
 cardapio.templates = {

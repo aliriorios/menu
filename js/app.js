@@ -96,11 +96,46 @@ cardapio.metodos = {
                     MEU_CARRINHO.push(item[0]);
                 }
 
-                alert("Item adicionado ao carrinho.");
+                cardapio.metodos.mensagem('Item adicionado ao carrinho.', 'green');
                 $("#qntd-" + id).text(0);
+
+                cardapio.metodos.atualizarBadgeTotal();
             }
         }
     },
+
+    // Atualizando a quantidade de produtos no carrinho
+    atualizarBadgeTotal: () => {
+        var total = 0;
+
+        $.each(MEU_CARRINHO, (i, e) => {
+            total += e.qntd;
+        })
+
+        if (total > 0) {
+            $(".botao-carrinho").removeClass("hidden");
+            $(".container-total-carrinho").removeClass("hidden");
+            
+        } else {
+            $(".botao-carrinho").addClass("hidden");
+            $(".container-total-carrinho").addClass("hidden");
+        }
+
+        $(".badge-total-carrinho").html(total);
+    },
+
+    mensagem: (texto, cor = 'red', tempo = 3000) => {
+        let id = Math.floor(Date.now() + Math.random()).toString();
+
+        let msg = `<div id="msg-${id}" class="toast ${cor}">${texto}</div>`
+
+        $("#container-mensagens").append(msg);
+
+        // Removendo a mensagem após o tempo passado
+        setTimeout(() => {
+            $("#msg-" + id).remove();
+        }, tempo);
+    }
 }
 
 cardapio.templates = {

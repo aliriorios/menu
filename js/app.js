@@ -127,13 +127,18 @@ cardapio.metodos = {
     mensagem: (texto, cor = 'red', tempo = 3000) => {
         let id = Math.floor(Date.now() + Math.random()).toString();
 
-        let msg = `<div id="msg-${id}" class="toast ${cor}">${texto}</div>`
+        let msg = `<div id="msg-${id}" class="animated fadeInDown toast ${cor}">${texto}</div>`
 
         $("#container-mensagens").append(msg);
 
         // Removendo a mensagem após o tempo passado
         setTimeout(() => {
-            $("#msg-" + id).remove();
+            $("#msg-" + id).removeClass("fadeInDown");
+            $("#msg-" + id).addClass("fadeOutUp");
+
+            setTimeout(() => {
+                $("#msg-" + id).remove();
+            }, 800);
         }, tempo);
     }
 }

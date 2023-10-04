@@ -232,11 +232,17 @@ cardapio.metodos = {
     },
 
     aumentarQuantidadeCarrinho: (id) => {
-
+        let qntdAtual = parseInt($("#qntd-carrinho-" + id).text());
+        $("#qntd-carrinho-" + id).text(qntdAtual + 1);
+        cardapio.metodos.atualizarCarrinho(id, qntdAtual + 1);
     },
 
     removerItemCarrinho: (id) => {
+        MEU_CARRINHO = $.grep(MEU_CARRINHO, (e, i) => {return e.id != id});
+        cardapio.metodos.carregarCarrinho();
 
+        // Atualiza o badge do botão carrinho
+        cardapio.metodos.atualizarBadgeTotal();
     },
 
     // Atualiza o carrinho com a quantidade atual (MEU_CARRINHO)

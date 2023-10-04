@@ -127,9 +127,38 @@ cardapio.metodos = {
     abrirCarrinho: (abrir) => {
         if (abrir) {
             $("#modalCarrinho").removeClass("hidden");
+
+            cardapio.metodos.carregarEtapa(1);
             
         } else {
             $("#modalCarrinho").addClass("hidden");
+        }
+    },
+
+    // Altera os textos e exibe os botões das etapas
+    carregarEtapa: (etapa) => {
+        if (etapa == 1) {
+            $("#lblTituloEtapa").text('Seu carrinho:');
+            $("#itensCarrinho").removeClass("hidden");
+
+            $("#localEntrega").addClass("hidden");
+            $("#resumoCarrinho").addClass("hidden");
+
+            $(".etapa").removeClass("active");
+            $(".etapa1").addClass("active");
+
+            $("#btnEtapaPedido").removeClass("hidden");
+            $("#btnEtapaEndereco").addClass("hidden");
+            $("#btnEtapaResumo").addClass("hidden");
+            $("#btnEtapaVoltar").addClass("hidden");
+        } 
+        
+        if (etapa == 2) {
+
+        }
+
+        if (etapa == 3) {
+
         }
     },
 

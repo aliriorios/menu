@@ -139,8 +139,8 @@ cardapio.metodos = {
     carregarEtapa: (etapa) => {
         if (etapa == 1) {
             $("#lblTituloEtapa").text('Seu carrinho:');
-            $("#itensCarrinho").removeClass("hidden");
 
+            $("#itensCarrinho").removeClass("hidden");
             $("#localEntrega").addClass("hidden");
             $("#resumoCarrinho").addClass("hidden");
 
@@ -154,12 +154,46 @@ cardapio.metodos = {
         } 
         
         if (etapa == 2) {
+            $("#lblTituloEtapa").text('Endereço de entrega:');
 
+            $("#itensCarrinho").addClass("hidden");
+            $("#localEntrega").removeClass("hidden");
+            $("#resumoCarrinho").addClass("hidden");
+
+            $(".etapa").removeClass("active");
+            $(".etapa1").addClass("active");
+            $(".etapa2").addClass("active");
+
+            $("#btnEtapaPedido").addClass("hidden");
+            $("#btnEtapaEndereco").removeClass("hidden");
+            $("#btnEtapaResumo").addClass("hidden");
+            $("#btnEtapaVoltar").removeClass("hidden");
         }
 
         if (etapa == 3) {
+            $("#lblTituloEtapa").text('Resumo do pedido:');
 
+            $("#itensCarrinho").addClass("hidden");
+            $("#localEntrega").addClass("hidden");
+            $("#resumoCarrinho").removeClass("hidden");
+
+            $(".etapa").removeClass("active");
+            $(".etapa1").addClass("active");
+            $(".etapa2").addClass("active");
+            $(".etapa3").addClass("active");
+
+            $("#btnEtapaPedido").addClass("hidden");
+            $("#btnEtapaEndereco").addClass("hidden");
+            $("#btnEtapaResumo").removeClass("hidden");
+            $("#btnEtapaVoltar").removeClass("hidden");
         }
+    },
+
+    // Identifica a etapa para voltar
+    voltarEtapa: () => {
+        let etapa = $(".etapa.active").length; // Identificando quantas etapas estão ativas
+
+        cardapio.metodos.carregarEtapa(etapa - 1); // Voltando para a anterior
     },
 
     mensagem: (texto, cor = 'red', tempo = 3000) => {

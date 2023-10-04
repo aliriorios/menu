@@ -220,7 +220,15 @@ cardapio.metodos = {
     },
 
     diminuirQuantidadeCarrinho: (id) => {
+        let qntdAtual = parseInt($("#qntd-carrinho-" + id).text());
 
+        if (qntdAtual > 1) {
+            $("#qntd-carrinho-" + id).text(qntdAtual - 1);
+            cardapio.metodos.atualizarCarrinho(id, qntdAtual - 1);
+
+        } else {
+            cardapio.metodos.removerItemCarrinho(id);
+        }
     },
 
     aumentarQuantidadeCarrinho: (id) => {
@@ -229,6 +237,15 @@ cardapio.metodos = {
 
     removerItemCarrinho: (id) => {
 
+    },
+
+    // Atualiza o carrinho com a quantidade atual (MEU_CARRINHO)
+    atualizarCarrinho: (id, qntd) => {
+        let objIndex = MEU_CARRINHO.findIndex((obj => obj.id == id));
+        MEU_CARRINHO[objIndex].qntd = qntd;
+
+        // Atualiza o badge do botão carrinho
+        cardapio.metodos.atualizarBadgeTotal();
     },
 
     mensagem: (texto, cor = 'red', tempo = 3000) => {

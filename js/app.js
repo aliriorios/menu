@@ -296,7 +296,7 @@ cardapio.metodos = {
 
         cardapio.metodos.carregarEtapa(2);
     },
-
+    /* Testando */
     // API ViaCEP
     buscarCep: () => {
         var cep = $("#txtCEP").val().trim().replace(/\D/g, '');

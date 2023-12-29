@@ -287,6 +287,64 @@ cardapio.metodos = {
         })
     },
 
+    carregarEndereco: () => {
+        if (MEU_CARRINHO.length <= 0) {
+            cardapio.metodos.mensagem("Seu carrinho está vazio.")
+            return;
+            
+        }
+
+        cardapio.metodos.carregarEtapa(2);
+    },
+
+    // API ViaCEP
+    buscarCep: () => {
+        var cep = $("#txtCEP").val().trim().replace(/\D/g, '');
+        /* 
+        * Pegando o valor do cep digitado
+        * trin -> Remove espaços vazios
+        * replace(/\D/g, '') -> Remove tudo que não for numérico
+        */
+
+        if (cep != "") {
+            var validacep = /^[0-9]{8}$/;
+            /* 
+            * Regex para validar a quantidade de caracteres
+            * Expressão regular
+            */
+
+            // Validando a expressão
+            if (validacep.test(cep)) {
+                $.getJSON("https://viacep.com.br/ws/" + cep + "/json/?callback=?", function(dados){
+                    if (!("erro" in dados)) {
+                        // Atualizando os campos dinamicamente com os valores retornados da API
+                        $("#txtEndereco").val(dados.logradouro);
+                        $("#txtBairro").val(dados.bairro);
+                        $("#txtCidade").val(dados.localidade);
+                        $("#ddlUF").val(dados.uf);
+
+                        $("#txtNúmero").focus();
+
+                    } else {
+                        cardapio.metodos.mensagem("CEP não encontrado. Preencha as informações manualmente.")
+                        $("#txtEndereco").focus();
+                    }
+                });
+
+            } else {
+                cardapio.metodos.mensagem("Formato do CEP inválido.");
+                $("#txtCEP").focus();
+            }
+
+        } else {
+            cardapio.metodos.mensagem("Informe o CEP, por favor!");
+            $("#txtCEP").focus();
+            /* 
+            * focus -> Foca o cursor no campo de CEP
+            */
+        }
+    },
+
     mensagem: (texto, cor = 'red', tempo = 3000) => {
         let id = Math.floor(Date.now() + Math.random()).toString();
 

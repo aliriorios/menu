@@ -2,21 +2,24 @@ $(document).ready(function () {
     cardapio.eventos.init();
 })
 
-// Objeto que guarda eventos, métodos e templates
-// Uma ideia de como aplicar POO
+// VARIÁVEIS GLOBAIS ----------------------------------------------------------------
 var cardapio = {};
 
 var MEU_CARRINHO = [];
+var MEU_ENDERECO = null;
 
 var VALOR_CARRINHO = 0;
 var VALOR_ENTREGA = 5;
 
+// OBJETOS EVENTOS ----------------------------------------------------------------
 cardapio.eventos = {
     init: () => {
         cardapio.metodos.obterItensCardapio();
     }
 }
 
+// OBJETOS MÉTODOS ----------------------------------------------------------------
+// Uma ideia de como aplicar POO
 cardapio.metodos = {
     // Obtendo os itens do cardápio
     obterItensCardapio: (categoria = 'burgers', verMais = false) => {
@@ -296,7 +299,7 @@ cardapio.metodos = {
 
         cardapio.metodos.carregarEtapa(2);
     },
-    /* Testando */
+
     // API ViaCEP
     buscarCep: () => {
         var cep = $("#txtCEP").val().trim().replace(/\D/g, '');
@@ -323,7 +326,7 @@ cardapio.metodos = {
                         $("#txtCidade").val(dados.localidade);
                         $("#ddlUF").val(dados.uf);
 
-                        $("#txtNúmero").focus();
+                        $("#txtNumero").focus();
 
                     } else {
                         cardapio.metodos.mensagem("CEP não encontrado. Preencha as informações manualmente.")
@@ -345,6 +348,64 @@ cardapio.metodos = {
         }
     },
 
+    resumoPedido: () => {
+        let cep = $("#txtCEP").val().trim();
+        let endereco = $("#txtEndereco").val().trim();
+        let bairro = $("#txtBairro").val().trim();
+        let cidade = $("#txtCidade").val().trim();
+        let uf = $("#ddlUF").val().trim();
+        let numero = $("#txtNumero").val().trim();
+        let complemento = $("#txtComplemento").val().trim();
+
+        if (cep.length <= 0) {
+            cardapio.metodos.mensagem("Informe o CEP, por favor.");
+            $("#txtCEP").focus();
+            return;
+        }
+
+        if (endereco.length <= 0) {
+            cardapio.metodos.mensagem("Informe o endereço, por favor.");
+            $("#txtEndereco").focus();
+            return;
+        }
+
+        if (bairro.length <= 0) {
+            cardapio.metodos.mensagem("Informe o bairro, por favor.");
+            $("#txtBairro").focus();
+            return;
+        }
+
+        if (cidade.length <= 0) {
+            cardapio.metodos.mensagem("Informe o cidade, por favor.");
+            $("#txtCidade").focus();
+            return;
+        }
+
+        if (uf.length == "-1") {
+            cardapio.metodos.mensagem("Informe o estado, por favor.");
+            $("#ddlUF").focus();
+            return;
+        }
+
+        if (numero.length <= 0) {
+            cardapio.metodos.mensagem("Informe o número, por favor.");
+            $("#txtNumero").focus();
+            return;
+        }
+
+        MEU_ENDERECO = {
+            cep: cep,
+            endereco: endereco,
+            bairro: bairro,
+            cidade: cidade,
+            uf: uf,
+            numero: numero,
+            complemento: complemento
+        }
+        
+        cardapio.metodos.carregarEtapa(3);
+    },
+
     mensagem: (texto, cor = 'red', tempo = 3000) => {
         let id = Math.floor(Date.now() + Math.random()).toString();
 
@@ -364,6 +425,7 @@ cardapio.metodos = {
     }
 }
 
+// TEMPLATES ----------------------------------------------------------------
 cardapio.templates = {
     item: `
         <div class="col-3 mb-5">

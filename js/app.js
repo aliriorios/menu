@@ -11,6 +11,8 @@ var MEU_ENDERECO = null;
 var VALOR_CARRINHO = 0;
 var VALOR_ENTREGA = 5;
 
+var CELULAR_EMPRESA = '5574999551132';
+
 // OBJETOS EVENTOS ----------------------------------------------------------------
 cardapio.eventos = {
     init: () => {
@@ -428,11 +430,6 @@ cardapio.metodos = {
 
     // Atualiza o link do botão do whatsapp
     finalizarPedido: () => {
-        /*
-        * API do Whatsapp
-        *https://wa.me/5574999669223?text=Ola
-        */
-
         if (MEU_CARRINHO.length > 0 && MEU_ENDERECO != null) {
             var texto = 'Olá, gostaria de fazer um pedido:';
             texto += `\n\n*Itens do pedido:*\n\${itens}`;
@@ -449,8 +446,12 @@ cardapio.metodos = {
                 if ((i + 1) == MEU_CARRINHO.length) {
                     texto = texto.replace(/\${itens}/g, itens);
 
+                    // Converte o "texto" para URL
+                    let encode = encodeURI(texto);
+
                     // Atualizando o "href" do botão de enviar
-                    
+                    let URL = `https://wa.me/${CELULAR_EMPRESA}?text=${encode}`;
+                    $("#btnEtapaResumo").attr('href', URL);
                 }
             })
         }

@@ -11,13 +11,14 @@ var MEU_ENDERECO = null;
 var VALOR_CARRINHO = 0;
 var VALOR_ENTREGA = 5;
 
-var CELULAR_EMPRESA = '5574999551132';
+var CELULAR_EMPRESA = '5517991234567';
 
 // OBJETOS EVENTOS ----------------------------------------------------------------
 cardapio.eventos = {
     init: () => {
         cardapio.metodos.obterItensCardapio();
         cardapio.metodos.carregarBotaoReserva();
+        cardapio.metodos.carregarBotaoLigar();
     }
 }
 
@@ -467,6 +468,10 @@ cardapio.metodos = {
 
         $("#btnReserva").attr('href', URL);
 
+    },
+
+    carregarBotaoLigar: () => {
+        $("#btnLigar").attr('href', `tel:${CELULAR_EMPRESA}`);
     },
 
     // Mensagem de notificação (padrão -> erro)

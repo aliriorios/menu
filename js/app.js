@@ -17,6 +17,7 @@ var CELULAR_EMPRESA = '5574999551132';
 cardapio.eventos = {
     init: () => {
         cardapio.metodos.obterItensCardapio();
+        cardapio.metodos.carregarBotaoReserva();
     }
 }
 
@@ -458,6 +459,17 @@ cardapio.metodos = {
 
     },
 
+    carregarBotaoReserva: () => {
+        var texto = 'Olá! Gostaria de fazer uma *reserva*.';
+
+        let encode = encodeURI(texto);
+        let URL = `https://wa.me/${CELULAR_EMPRESA}?text=${encode}`;;
+
+        $("#btnReserva").attr('href', URL);
+
+    },
+
+    // Mensagem de notificação (padrão -> erro)
     mensagem: (texto, cor = 'red', tempo = 3000) => {
         let id = Math.floor(Date.now() + Math.random()).toString();
 

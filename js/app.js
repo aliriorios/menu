@@ -19,6 +19,7 @@ cardapio.eventos = {
         cardapio.metodos.obterItensCardapio();
         cardapio.metodos.carregarBotaoReserva();
         cardapio.metodos.carregarBotaoLigar();
+        cardapio.metodos.carregarBotaoLinkWhatsapp();
     }
 }
 
@@ -464,7 +465,7 @@ cardapio.metodos = {
         var texto = 'Olá! Gostaria de fazer uma *reserva*.';
 
         let encode = encodeURI(texto);
-        let URL = `https://wa.me/${CELULAR_EMPRESA}?text=${encode}`;;
+        let URL = `https://wa.me/${CELULAR_EMPRESA}?text=${encode}`;
 
         $("#btnReserva").attr('href', URL);
 
@@ -485,6 +486,12 @@ cardapio.metodos = {
 
         $("#depoimento-" + depoimento).removeClass('hidden');
         $("#btnDepoimento-" + depoimento).addClass('active');
+    },
+
+    carregarBotaoLinkWhatsapp: () => {
+        let URL = `https://wa.me/${CELULAR_EMPRESA}`;
+
+        $(".btnWhatsapp").attr("href", URL);
     },
 
     // Mensagem de notificação (padrão -> erro)

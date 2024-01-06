@@ -474,6 +474,19 @@ cardapio.metodos = {
         $("#btnLigar").attr('href', `tel:${CELULAR_EMPRESA}`);
     },
 
+    abrirDepoimento: (depoimento) => {
+        $("#depoimento-1").addClass('hidden');
+        $("#depoimento-2").addClass('hidden');
+        $("#depoimento-3").addClass('hidden');
+
+        $("#btnDepoimento-1").removeClass('active');
+        $("#btnDepoimento-2").removeClass('active');
+        $("#btnDepoimento-3").removeClass('active');
+
+        $("#depoimento-" + depoimento).removeClass('hidden');
+        $("#btnDepoimento-" + depoimento).addClass('active');
+    },
+
     // Mensagem de notificação (padrão -> erro)
     mensagem: (texto, cor = 'red', tempo = 3000) => {
         let id = Math.floor(Date.now() + Math.random()).toString();

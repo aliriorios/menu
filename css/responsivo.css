@@ -34,6 +34,7 @@
         padding-right: 35px !important;
     }
 
+    /* Header ---------------------------------------------------- */
     .navbar-toggler-icon {
         padding-top: 5px;
     }
@@ -60,6 +61,7 @@
         display: none;
     }
 
+    /* Bannere ---------------------------------------------------- */
     .banner {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -90,6 +92,68 @@
 
     .title {
         font-size: 30px;
+    }
+
+    /* Service ---------------------------------------------------- */
+    .service {
+        padding-bottom: 50px;
+    }
+    
+    /* Menu ---------------------------------------------------- */
+    .menu {
+        padding-bottom: 50px;
+    }
+
+    .container-menu {
+        /* Barra de rolagem */
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        display: flex;
+
+        padding-bottom: 15px;
+    }
+
+    .img-produto {
+        position: absolute;
+        left: 15px;
+    }
+
+    .card-item {
+        height: 110px;
+
+        padding-left: 110px;
+
+        justify-content: center;
+        align-items: start;
+    }
+
+    .card-item .img-produto img {
+        width: 80px;
+    }
+
+    .title-produto {
+        margin-top: 0px !important;
+
+        height: 30px !important;
+        width: 100%;
+
+        text-align: left !important;
+    }
+
+    .price-produto {
+        margin-bottom: 0px !important;
+        margin-top: 0px !important;
+
+        font-size: 22px !important;
+    }
+
+    .card-item .add-carrinho {
+        margin-top: 5px;
+    }
+
+    #itensMenu .mb-5 {
+        margin-bottom: 15px !important;
     }
 
 }

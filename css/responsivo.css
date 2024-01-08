@@ -1,0 +1,29 @@
+/*
+* Boostrap Class: 
+* - Desktop (>= 992px) ... col-lg-
+* - Desktop E Tablet (768px a 991px) ... col-md-
+* - Tablet (576px a 767px) ... col-sm-
+* - Tablets Celular (0px a 767px) ... col (demais tamanhos)
+*
+* Lembrando que col-...-12 significa a tela inteira no Boostrap
+*/
+
+/* Desktop + */
+@media (min-width: 992px) {
+
+}
+
+/* Desktop e Tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+
+}
+
+/* Tablets e Celulares */
+@media (max-width: 767px) {
+
+}

@@ -156,4 +156,30 @@
         margin-bottom: 15px !important;
     }
 
+    /* Depositions e Reserve ---------------------------------------------------- */
+    .depositions,
+    .reserve {
+        padding-bottom: 50px;
+    }
+
+    .card-secondary {
+        padding: 45px;
+
+        border-radius: 50px;
+    }
+
+    /* Footer ---------------------------------------------------- */
+    .container-logo-footer, 
+    .container-redes-footer {
+        justify-content: center;
+    }
+
+    .container-texto-footer p {
+        text-align: center;
+    }
+
+    .container-redes-footer {
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
 }

@@ -15,6 +15,10 @@
         padding-right: 35px !important;
     }
 
+    .no-sm-desktop {
+        display: none;
+    }
+
     /* Header ---------------------------------------------------- */
     .navbar .nav-link {
         padding-left: 25px !important;
@@ -50,7 +54,8 @@
     }
 
     .card-case {
-        bottom: 130px;
+        bottom: 150px;
+        right: 45px;
     }
 
     .btn-social {
@@ -76,11 +81,28 @@
 
         padding-bottom: 15px;
     }
+
+    .card-item {
+        height: 300px;
+    }
+
+    /* Depositions e Reserve ---------------------------------------------------- */
+    .depositions,
+    .reserve {
+        padding-bottom: 50px;
+    }
+
+    .depositions .img-banner img {
+        width: 370px;
+        left: -10px;
+    }
 }
 
 /* Desktop e Tablets */
 @media (min-width: 768px) and (max-width: 991px) {
-
+    .no-mobile {
+        display: none;
+    }
 }
 
 /* Tablets */
@@ -92,11 +114,6 @@
 @media (max-width: 767px) {
     .no-mobile {
         display: none;
-    }
-
-    .col-one {
-        padding-left: 35px !important;
-        padding-right: 35px !important;
     }
 
     /* Header ---------------------------------------------------- */
@@ -198,11 +215,6 @@
     }
 
     /* Depositions e Reserve ---------------------------------------------------- */
-    .depositions,
-    .reserve {
-        padding-bottom: 50px;
-    }
-
     .card-secondary {
         padding: 45px;
 

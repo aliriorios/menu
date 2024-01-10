@@ -31,8 +31,8 @@
 
     /* Banner ---------------------------------------------------- */
     .banner {
-        padding-top: 70px;
-        padding-bottom: 70px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     .card-banner {
@@ -50,7 +50,31 @@
     }
 
     .card-case {
-        bottom: 0px;
+        bottom: 130px;
+    }
+
+    .btn-social {
+        margin-top: 0px !important;
+    }
+
+    /* Service ---------------------------------------------------- */
+    .service {
+        padding-bottom: 50px;
+    }
+
+    /* Menu ---------------------------------------------------- */
+    .menu {
+        padding-bottom: 50px;
+    }
+
+    .container-menu {
+        /* Barra de rolagem */
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        display: flex;
+
+        padding-bottom: 15px;
     }
 }
 
@@ -102,12 +126,7 @@
         display: none;
     }
 
-    /* Bannere ---------------------------------------------------- */
-    .banner {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-
+    /* Banner ---------------------------------------------------- */
     .text-banner h1 {
         font-size: 36px;
     }
@@ -134,27 +153,8 @@
     .title {
         font-size: 30px;
     }
-
-    /* Service ---------------------------------------------------- */
-    .service {
-        padding-bottom: 50px;
-    }
     
     /* Menu ---------------------------------------------------- */
-    .menu {
-        padding-bottom: 50px;
-    }
-
-    .container-menu {
-        /* Barra de rolagem */
-        overflow-x: auto;
-        overflow-y: hidden;
-
-        display: flex;
-
-        padding-bottom: 15px;
-    }
-
     .img-produto {
         position: absolute;
         left: 15px;

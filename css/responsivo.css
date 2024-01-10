@@ -8,9 +8,50 @@
 * Lembrando que col-...-12 significa a tela inteira no Boostrap
 */
 
-/* Desktop + */
-@media (min-width: 992px) {
+/* Desktop */
+@media (min-width: 992), (max-width: 1200px) {
+    .col-one {
+        padding-left: 35px !important;
+        padding-right: 35px !important;
+    }
 
+    /* Header ---------------------------------------------------- */
+    .navbar .nav-link {
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+
+    .navbar .btn-icon {
+        padding-right: 20px;
+    }
+
+    .navbar .btn-icon span.icon {
+        display: none !important;
+    }
+
+    /* Banner ---------------------------------------------------- */
+    .banner {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .card-banner {
+        height: 350px;
+        width: 350px;
+
+        border-radius: 135px;
+        top: -50px;
+    }
+
+    .img-banner img {
+        width: 470px;
+
+        top: 60px;
+    }
+
+    .card-case {
+        bottom: 0px;
+    }
 }
 
 /* Desktop e Tablets */

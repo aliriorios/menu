@@ -182,4 +182,39 @@
         margin-top: 40px;
         margin-bottom: 50px;
     }
+
+    /* Modal ---------------------------------------------------- */
+    .modal-full {
+        padding: 40px;
+    }
+
+    .modal-full .item-carrinho {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .modal-full .img-produto {
+        position: relative;
+        left: 0;
+    }
+
+    .modal-full .img-produto img {
+        width: 50px;
+    }
+
+    .modal-full .dados-produto {
+        padding-left: 15px;
+        padding-right: 15px;
+
+        display: grid;
+    }
+
+    .modal-full .title-produto,
+    .modal-full .price-produto {
+        font-size: 16px !important;
+    }
+
+    .modal-full .add-numero-itens {
+        padding: 2px 10px;
+    }
 }

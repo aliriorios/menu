@@ -103,18 +103,6 @@
     .no-mobile {
         display: none;
     }
-}
-
-/* Tablets */
-@media (min-width: 576px) and (max-width: 767px) {
-
-}
-
-/* Tablets e Celulares */
-@media (max-width: 767px) {
-    .no-mobile {
-        display: none;
-    }
 
     /* Header ---------------------------------------------------- */
     .navbar-toggler-icon {
@@ -140,6 +128,30 @@
     }
 
     .navbar-collapse .btn-icon span.icon {
+        display: none;
+    }
+
+    /* Depositions e Reserve ---------------------------------------------------- */
+    .card-secondary {
+        padding: 45px;
+        
+        border-radius: 50px;
+    }
+    
+    /* Footer ---------------------------------------------------- */
+    .container-texto-footer p {
+        text-align: center;
+    }
+}
+
+/* Tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+    
+}
+
+/* Tablets e Celulares */
+@media (max-width: 767px) {
+    .no-mobile {
         display: none;
     }
 
@@ -214,7 +226,7 @@
         margin-bottom: 15px !important;
     }
 
-    /* Depositions e Reserve ---------------------------------------------------- */
+    /* Depositions e Reserve */
     .card-secondary {
         padding: 45px;
 
@@ -225,10 +237,6 @@
     .container-logo-footer, 
     .container-redes-footer {
         justify-content: center;
-    }
-
-    .container-texto-footer p {
-        text-align: center;
     }
 
     .container-redes-footer {

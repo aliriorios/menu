@@ -1,3 +1,7 @@
+/* Imports */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css"; /* v4.0.0 */
+@import "../node_modules/animate.css/animate.css"; /* v4.1.1 */
+
 @font-face {
   font-family: 'PoppinsMedium';
   src: url('../fonts/Poppins-Medium.otf');

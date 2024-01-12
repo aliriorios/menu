@@ -3,6 +3,7 @@
 # - Animatee (v4.1.1)
 # - Wow (v1.1.2)
 # - Font-Awesome (v15.5.4)
+# - Poopers (v1.16.1)
 
 # Ignore os arquivos de módulos package
 node_modules/

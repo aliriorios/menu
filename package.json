@@ -10,7 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "animate.css": "^4.1.1",
-    "bootstrap": "^4.0.0"
+    "bootstrap": "^4.0.0",
+    "modernizr": "^3.13.0",
+    "wowjs": "^1.1.2"
   }
 }

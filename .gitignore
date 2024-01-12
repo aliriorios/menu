@@ -1,2 +1,8 @@
+# Módulos usados no projeto:
+# - Bootstrap (v4.0.0)
+# - Animatee (v4.1.1)
+# - Wow (v1.1.2)
+# - Font-Awesome (v15.5.4)
+
 # Ignore os arquivos de módulos package
 node_modules/

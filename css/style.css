@@ -1,6 +1,7 @@
 /* Imports */
-@import "../node_modules/bootstrap/dist/css/bootstrap.min.css"; /* v4.0.0 */
-@import "../node_modules/animate.css/animate.css"; /* v4.1.1 */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/animate.css/animate.css";
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
 
 @font-face {
   font-family: 'PoppinsMedium';

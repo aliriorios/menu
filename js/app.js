@@ -517,7 +517,7 @@ cardapio.metodos = {
 // TEMPLATES ----------------------------------------------------------------
 cardapio.templates = {
     item: `
-        <div class="col-12 col-lg-3 col-md-4 col-sm-12 mb-5 wow fadeInUp">
+        <div class="col-12 col-lg-3 col-md-4 col-sm-12 mb-5 wow animate__animated animate__fadeInUp">
             <div class="card card-item" id="\${id}">
                 <div class="img-produto">
                     <img src="\${img}" alt="">

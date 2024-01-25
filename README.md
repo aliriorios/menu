@@ -1,7 +1,6 @@
 <!-- HEADER -->
 <h1 align="center">
     <p>Cardápio / Menu</p> 
-    <img src="https://cdn.discordapp.com/attachments/1200073479622492220/1200077303280042084/Gif_do_readme.gif?ex=65c4de15&is=65b26915&hm=5c4334a037fbc8ff0f64ba471a89c8b33dfb282884d741b0a48736406f71c61b&" width="720px">
 </h1>
 
 <!-- INDEX -->

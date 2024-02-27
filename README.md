@@ -32,7 +32,7 @@
 - Animate.css - v4.1.1 ([Docs](https://animate.style))
 - Bootstrap - v4.6.2 ([Docs](https://getbootstrap.com/docs/4.6/getting-started/introduction/))
 - Font Awesome - 5.15.4 ([Docs](https://fontawesome.com/docs))
-- JQuery - v1.12.4 ([Docs](https://api.jquery.com))
+- JQuery - v3.7.1 ([Docs](https://api.jquery.com))
 - WOW.js - v1.1.2 ([Docs](https://wowjs.uk/docs))
 
 > ### Outras ferramentas:
@@ -82,7 +82,7 @@
 - Faça o link do módulo no arquivo html principal: <script language="JavaScript" src="node_modules/popper.js/dist/umd/popper.min.js" defer></script>
 - O popper.js é OPCIONAL porque o Bootstrap já o inclui no projeto, mas caso seja necessário já fica a configuração.
 
-> <br/>Os que não estiverem inclusos, já estão configurados na pasta do projeto como o JQuery.
+> <br/>Os que não estiverem inclusos, já estão configurados na pasta do projeto como o Modernizr ou já estão integrados nas dependências de outros, como o JQuery. O JQuery é uma dependência para o Bootstrap.
 
 <!-- LICENSE -->
 <h2>🧾 Licença</h2>

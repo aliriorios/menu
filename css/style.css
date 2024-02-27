@@ -742,6 +742,8 @@ a.navbar-brand {
 
 select.form-control {
   height: 60px !important;
+
+  padding: 15px !important;
 }
 
 .container-cep .form-control {

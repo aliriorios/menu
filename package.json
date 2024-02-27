@@ -12,8 +12,9 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "animate.css": "^4.1.1",
-    "bootstrap": "^4.0.0",
+    "bootstrap": "^4.6.2",
     "modernizr": "^3.13.0",
+    "popper.js": "^1.16.1-lts",
     "wowjs": "^1.1.2"
   }
 }

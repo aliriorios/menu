@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- HTML compativel com "IE Edge" -->
   
   <title>Restaurante - Seja bem-vindo!</title>
+  <link rel="icon" type="image/x-icon" href="img/favicon.png">
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsivo.css">
@@ -396,7 +397,7 @@
           <!-- Uma linha -->
           <div class="col-12 col-lg-4 col-md-4 col-sm-12">
             <div class="form-group container-cep">
-              <label for="">CEP:</label>
+              <label for="txtCEP">CEP:</label>
               <input type="text" id="txtCEP" class="form-control">
               <a class="btn btn-yellow btn-sm" onclick="cardapio.metodos.buscarCep()"><i class="fa fa-search"></i></a>
             </div>
@@ -407,21 +408,21 @@
           <!-- Uma linha -->
           <div class="col-12 col-lg-6 col-md-6 col-sm-12">
             <div class="form-group">
-              <label for="">Endereço</label>
+              <label for="txtEndereco">Endereço</label>
               <input type="text" id="txtEndereco" class="form-control">
             </div>
           </div>
 
           <div class="col-12 col-lg-4 col-md-4 col-sm-12">
             <div class="form-group">
-              <label for="">Bairro</label>
+              <label for="txtBairro">Bairro</label>
               <input type="text" id="txtBairro" class="form-control">
             </div>
           </div>
 
           <div class="col-12 col-lg-2 col-md-2 col-sm-12">
             <div class="form-group">
-              <label for="">Número</label>
+              <label for="txtNumero">Número</label>
               <input type="text" id="txtNumero" class="form-control">
             </div>
           </div>
@@ -429,21 +430,21 @@
           <!-- Uma linha -->
           <div class="col-12 col-lg-6 col-md-6 col-sm-12">
             <div class="form-group">
-              <label for="">Cidade</label>
+              <label for="txtCidade">Cidade</label>
               <input type="text" id="txtCidade" class="form-control">
             </div>
           </div>
 
           <div class="col-12 col-lg-4 col-md-4 col-sm-12">
             <div class="form-group">
-              <label for="">Complemento</label>
+              <label for="txtComplemento">Complemento</label>
               <input type="text" id="txtComplemento" class="form-control">
             </div>
           </div>
 
           <div class="col-12 col-lg-2 col-md-2 col-sm-12">
             <div class="form-group">
-              <label for="">UF</label>
+              <label for="ddlUF">UF</label>
               <select class="form-control" id="ddlUF">
                 <option value="-1">...</option>
                 <option value="AC">AC</option>

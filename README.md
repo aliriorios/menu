@@ -84,6 +84,10 @@
 
 > <br/>Os que não estiverem inclusos, já estão configurados na pasta do projeto como o Modernizr ou já estão integrados nas dependências de outros, como o JQuery. O JQuery é uma dependência para o Bootstrap.
 
+<h2>🌐 Hospedagem</h2>
+
+> Visualização do projeto em hospedagem gratuita: https://fastfoodmenu.000webhostapp.com
+
 <!-- LICENSE -->
 <h2>🧾 Licença</h2>
 

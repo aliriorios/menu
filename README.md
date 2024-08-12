@@ -50,37 +50,32 @@
     # O animate foi utilizado para animações e suavizações de elementos do front end.
     $ npm install animate.css --save
 ```
-- Importe o módulo no arquivo css principal: @import "../node_modules/animate.css/animate.css";
 
 > ### Bootstrap:
 ```bash
     # O bootstrap faz parte de basicamente toda a estrutura css do projeto; o sistema provavellmente ficará "quebrado" sem ele.
     $ npm i bootstrap@4.6.2
 ```
-- Importe o módulo no arquivo css principal: @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 > ### Font Awesome:
 ```bash
     # Os ícones do projeto são todos dessa biblioteca.
     $ npm i @fortawesome/fontawesome-free@5.15.4
 ```
-- Importe o módulo no arquivo css principal: @import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
 
 > ### WOW.js:
 ```bash
     # Basicamente, permite que as animações do animate.css sejam "disparados" apenas quando visualizados no display.
+    # Vale lembrar que o wow.js não funciona com o parâmetro "defer"; nem mesmo se colocar o link no final do arquivo.
     $ npm i wowjs@1.1.2
 ```
-- Faça o link do módulo no arquivo html principal: <script language="JavaScript" src="node_modules/wowjs/dist/wow.min.js"></script>
-- Vale lembrar que o wow.js não funciona com o parâmetro "defer"; nem mesmo se colocar o link no final do arquivo.
 
 > ### Popper.js (opcional):
 ```bash
     # O popper.js é para posicionamento de elementos html. Ele faz parte do Bootstrap.
+    # O Bootstrap já o inclui no projeto, mas caso seja necessário já fica a configuração.
     $ npm i popper.js@1.16.1-lts
 ```
-- Faça o link do módulo no arquivo html principal: <script language="JavaScript" src="node_modules/popper.js/dist/umd/popper.min.js" defer></script>
-- O popper.js é OPCIONAL porque o Bootstrap já o inclui no projeto, mas caso seja necessário já fica a configuração.
 
 > <br/>Os que não estiverem inclusos, já estão configurados na pasta do projeto como o Modernizr ou já estão integrados nas dependências de outros, como o JQuery. O JQuery é uma dependência para o Bootstrap.
 
